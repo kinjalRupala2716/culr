@@ -24,4 +24,6 @@ class AppStrings {
   static const hintDOB =
       "To sign up, you need to be at least 18. Your birthday won’t be shared with other people who use Fantasy cult.";
   static const selectDOB = "Select Date of Birth";
+  static const invitationCodeHint = "Enter Invitation code";
+  static const invitationCode = "INVITATION CODE";
 }

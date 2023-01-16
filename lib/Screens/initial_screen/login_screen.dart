@@ -287,29 +287,4 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _textFormField(String text) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 40, right: 40, top: 30),
-      child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height / 20,
-          decoration: BoxDecoration(
-              border: Border.all(
-                width: 2,
-                color: GetColor().getColorFromHex(AppColors().golden),
-              ),
-              borderRadius: BorderRadius.circular(5)),
-          child: TextFormField(
-            textAlign: TextAlign.center,
-            cursorColor: GetColor().getColorFromHex(AppColors().golden),
-            decoration: InputDecoration(
-                hintText: text,
-                border: InputBorder.none,
-                hintStyle: TextStyle(
-                  fontSize: 15,
-                  color: GetColor().getColorFromHex(AppColors().hintColor),
-                )),
-          )),
-    );
-  }
 }

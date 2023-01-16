@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class CommonTextField extends StatefulWidget {
   String hint;
-  final TextAlign textAlign;
-  final double padding;
+   TextAlign textAlign;
+   double padding;
 
   CommonTextField(
       {super.key,

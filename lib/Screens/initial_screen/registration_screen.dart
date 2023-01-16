@@ -1,4 +1,3 @@
-import 'package:fantasy_cult/Screens/app_screens/home_screen.dart';
 import 'package:fantasy_cult/Screens/common_widget/common_button.dart';
 import 'package:fantasy_cult/Screens/common_widget/common_textField.dart';
 import 'package:fantasy_cult/util/app_string.dart';
@@ -43,7 +42,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             height: MediaQuery.of(context).size.height / 1.1,
             width: double.maxFinite,
             child: SingleChildScrollView(
-              physics: AlwaysScrollableScrollPhysics(),
+              physics: const AlwaysScrollableScrollPhysics(),
               child: Column(
                 children: [
                   Padding(
@@ -184,12 +183,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     child: CommonButton(
                         text: AppStrings.letsStart,
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const HomeScreen(),
-                            ),
-                          );
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (context) => const HomeScreen(),
+                          //   ),
+                          // );
                         }),
                   ),
                 ],
@@ -208,11 +207,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       firstDate: DateTime(2000),
       lastDate: DateTime(2025),
     );
-    if (picked != null && picked != selectedDate)
+    if (picked != null && picked != selectedDate) {
       setState(() {
         selectedDate = picked;
         dateController.text = picked.toString();
       });
+    }
   }
 
   Widget myDropDownforState() {

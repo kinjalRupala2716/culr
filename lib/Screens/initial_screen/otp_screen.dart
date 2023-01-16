@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:fantasy_cult/Screens/app_screens/demo.dart';
+import 'package:fantasy_cult/Screens/app_screens/my_contacts.dart';
 import 'package:fantasy_cult/Screens/common_widget/common_button.dart';
 import 'package:fantasy_cult/util/app_string.dart';
 import 'package:fantasy_cult/util/color.dart';
@@ -154,14 +156,21 @@ class _OtpScreenState extends State<OtpScreen> {
                   ),
                 ],
               ),
-            
               Padding(
                 padding: const EdgeInsets.only(bottom: 50),
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: CommonButton(
                     text: AppStrings.verify,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          // builder: (context) => const DemoScreen(),
+                          builder: (context) => const MyContactsScreen(),
+                        ),
+                      );
+                    },
                   ),
                 ),
               )

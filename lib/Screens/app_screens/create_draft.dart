@@ -312,7 +312,7 @@ class _CreateDraftScreenState extends State<CreateDraftScreen> {
                       hint: AppStrings.leagueNameHint,
                       textAlign: TextAlign.start,
                       padding: 10),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   CommonTextField(
@@ -351,7 +351,7 @@ class _CreateDraftScreenState extends State<CreateDraftScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20)),
@@ -366,7 +366,7 @@ class _CreateDraftScreenState extends State<CreateDraftScreen> {
                                     AppColors().golden,
                                   )),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Text(
@@ -386,11 +386,11 @@ class _CreateDraftScreenState extends State<CreateDraftScreen> {
                                     .getColorFromHex(AppColors().appBlack),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Container(
-                              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                              padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: GetColor()
@@ -407,7 +407,7 @@ class _CreateDraftScreenState extends State<CreateDraftScreen> {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20)),
@@ -422,7 +422,7 @@ class _CreateDraftScreenState extends State<CreateDraftScreen> {
                                     AppColors().golden,
                                   )),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Text(
@@ -442,11 +442,11 @@ class _CreateDraftScreenState extends State<CreateDraftScreen> {
                                     .getColorFromHex(AppColors().appBlack),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Container(
-                              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                              padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: GetColor()
@@ -463,7 +463,7 @@ class _CreateDraftScreenState extends State<CreateDraftScreen> {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20)),
@@ -478,7 +478,7 @@ class _CreateDraftScreenState extends State<CreateDraftScreen> {
                                     AppColors().golden,
                                   )),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Text(
@@ -502,7 +502,7 @@ class _CreateDraftScreenState extends State<CreateDraftScreen> {
                               height: 20,
                             ),
                             Container(
-                              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                              padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: GetColor()

@@ -43,31 +43,42 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             width: double.maxFinite,
             child: SingleChildScrollView(
               physics: const AlwaysScrollableScrollPhysics(),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Image.asset("assets/logos/fantasylogo1.png"),
-                  ),
-                  CommonTextField(
-                    hint: AppStrings.userNameHint,
-                    textAlign: TextAlign.start,
-                    padding: 10,
-                  ),
-                  CommonTextField(
-                    hint: AppStrings.emailHint,
-                    textAlign: TextAlign.start,
-                    padding: 10,
-                  ),
-                  CommonTextField(
-                    hint: AppStrings.phoneHint,
-                    textAlign: TextAlign.start,
-                    padding: 10,
-                  ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(left: 40, right: 40, top: 20),
-                    child: Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(40, 40, 40, 20),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(0),
+                      child: Image.asset("assets/logos/fantasylogo1.png"),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    CommonTextField(
+                      hint: AppStrings.userNameHint,
+                      textAlign: TextAlign.start,
+                      padding: 10,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    CommonTextField(
+                      hint: AppStrings.emailHint,
+                      textAlign: TextAlign.start,
+                      padding: 10,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    CommonTextField(
+                      hint: AppStrings.phoneHint,
+                      textAlign: TextAlign.start,
+                      padding: 10,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
                       width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height / 20,
                       decoration: BoxDecoration(
@@ -113,25 +124,30 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         ),
                       ),
                     ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 2),
-                    child: Text(
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const Text(
                       AppStrings.hintDOB,
                       textAlign: TextAlign.justify,
                       style: TextStyle(color: Colors.white, fontSize: 10),
                     ),
-                  ),
-                  myDropDownforState(),
-                  CommonTextField(
-                    hint: AppStrings.referralHint,
-                    textAlign: TextAlign.start,
-                    padding: 10,
-                  ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(left: 40, right: 40, top: 20),
-                    child: Container(
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    myDropDownforState(),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    CommonTextField(
+                      hint: AppStrings.referralHint,
+                      textAlign: TextAlign.start,
+                      padding: 10,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
                       width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height / 20,
                       decoration: BoxDecoration(
@@ -176,22 +192,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 40, right: 40, top: 30, bottom: 40),
-                    child: CommonButton(
-                        text: AppStrings.letsStart,
-                        onPressed: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => const HomeScreen(),
-                          //   ),
-                          // );
-                        }),
-                  ),
-                ],
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    CommonButton(text: AppStrings.letsStart, onPressed: () {}),
+                  ],
+                ),
               ),
             ),
           ),
@@ -216,43 +222,40 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   }
 
   Widget myDropDownforState() {
-    return Padding(
-      padding: const EdgeInsets.only(left: 40, right: 40, top: 20),
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height / 20,
-        decoration: BoxDecoration(
-            border: Border.all(
-              width: 2,
-              color: GetColor().getColorFromHex(AppColors().golden),
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height / 20,
+      decoration: BoxDecoration(
+          border: Border.all(
+            width: 2,
+            color: GetColor().getColorFromHex(AppColors().golden),
+          ),
+          borderRadius: BorderRadius.circular(5)),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: DropdownButtonHideUnderline(
+          child: DropdownButton(
+            dropdownColor: GetColor().getColorFromHex(AppColors().golden),
+            isExpanded: true,
+            icon: const Icon(
+              Icons.keyboard_arrow_down,
+              color: Colors.white,
             ),
-            borderRadius: BorderRadius.circular(5)),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: DropdownButtonHideUnderline(
-            child: DropdownButton(
-              dropdownColor: GetColor().getColorFromHex(AppColors().golden),
-              isExpanded: true,
-              icon: const Icon(
-                Icons.keyboard_arrow_down,
-                color: Colors.white,
-              ),
-              items: stateItems.map((String items) {
-                return DropdownMenuItem(
-                  value: items,
-                  child: Text(
-                    items,
-                    style: const TextStyle(color: Colors.white, fontSize: 15),
-                  ),
-                );
-              }).toList(),
-              onChanged: (newValue) {
-                setState(() {
-                  fixedvalueforstate = newValue!;
-                });
-              },
-              value: fixedvalueforstate,
-            ),
+            items: stateItems.map((String items) {
+              return DropdownMenuItem(
+                value: items,
+                child: Text(
+                  items,
+                  style: const TextStyle(color: Colors.white, fontSize: 15),
+                ),
+              );
+            }).toList(),
+            onChanged: (newValue) {
+              setState(() {
+                fixedvalueforstate = newValue!;
+              });
+            },
+            value: fixedvalueforstate,
           ),
         ),
       ),

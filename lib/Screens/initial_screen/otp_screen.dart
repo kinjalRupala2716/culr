@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:developer';
 
-import 'package:fantasy_cult/Screens/app_screens/demo.dart';
 import 'package:fantasy_cult/Screens/app_screens/my_contacts.dart';
 import 'package:fantasy_cult/Screens/common_widget/common_button.dart';
 import 'package:fantasy_cult/util/app_string.dart';
@@ -120,7 +119,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           ),
                         ),
                         textStyle:
-                            TextStyle(color: Colors.black, fontSize: 24)),
+                            const TextStyle(color: Colors.black, fontSize: 24)),
                   ),
                   const SizedBox(
                     height: 20,
@@ -166,7 +165,6 @@ class _OtpScreenState extends State<OtpScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          // builder: (context) => const DemoScreen(),
                           builder: (context) => const MyContactsScreen(),
                         ),
                       );

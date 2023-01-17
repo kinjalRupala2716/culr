@@ -26,4 +26,12 @@ class AppStrings {
   static const selectDOB = "Select Date of Birth";
   static const invitationCodeHint = "Enter Invitation code";
   static const invitationCode = "INVITATION CODE";
+  static const choosePackage = "Choose a package to create your league";
+  static const information =
+      "You can play private leagues for free or pay for \ncustomization package to modify 100+ \nleague rules.";
+  static const selectType = "Select Type";
+  static const leagueNameHint = "Enter Your League Name";
+  static const teamNameHint = "Enter Your Team Name";
+  static const selectTeamMember = "Select Team Members";
+  static const choosePlan = "Choose Plan";
 }

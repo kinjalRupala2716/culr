@@ -1,22 +1,24 @@
 import 'package:fantasy_cult/util/color.dart';
 import 'package:flutter/material.dart';
 
-class CommonTextField extends StatefulWidget {
+// ignore: camel_case_types, must_be_immutable
+class commonTextField extends StatefulWidget {
   String hint;
    TextAlign textAlign;
    double padding;
 
-  CommonTextField(
+  commonTextField(
       {super.key,
       required this.hint,
       required this.textAlign,
       required this.padding});
 
   @override
-  State<CommonTextField> createState() => _CommonTextFieldState();
+  State<commonTextField> createState() => _commonTextFieldState();
 }
 
-class _CommonTextFieldState extends State<CommonTextField> {
+// ignore: camel_case_types
+class _commonTextFieldState extends State<commonTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(

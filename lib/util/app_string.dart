@@ -34,4 +34,11 @@ class AppStrings {
   static const teamNameHint = "Enter Your Team Name";
   static const selectTeamMember = "Select Team Members";
   static const choosePlan = "Choose Plan";
+  static const fullSeries = "FULL SERIES";
+  static const individualGame = "INDIVIDUAL GAME";
+  static const createDraft = "Create Draft";
+  static const joinPublic = "Join Public";
+  static const joinPrivate = "Join Private";
+  static const publicLeague = "Public League";
+  static const privateLeague = "PRIVATE LEAGUE";
 }

@@ -48,15 +48,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 60),
-                              child: CommonTextField(
+                              child: commonTextField(
                                 hint: AppStrings.numberHint,
                                 textAlign: TextAlign.center,
                                 padding: 0,
                               ),
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(40, 20, 40, 20),
+                              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                               child: CommonButton(
                                   text: AppStrings.sendOtp,
                                   onPressed: () {
@@ -161,7 +160,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             // _textFormField(AppStrings.emailHint),
                             // _textFormField(AppStrings.passwordHint),
-                            CommonTextField(
+                            commonTextField(
                               hint: AppStrings.emailHint,
                               textAlign: TextAlign.center,
                               padding: 0,
@@ -169,7 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             const SizedBox(
                               height: 10,
                             ),
-                            CommonTextField(
+                            commonTextField(
                               hint: AppStrings.passwordHint,
                               textAlign: TextAlign.center,
                               padding: 0,

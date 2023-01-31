@@ -1,3 +1,4 @@
+import 'package:fantasy_cult/Screens/app_screens/full_series.dart';
 import 'package:fantasy_cult/Screens/common_widget/common_button.dart';
 import 'package:fantasy_cult/Screens/common_widget/common_textField.dart';
 import 'package:fantasy_cult/util/app_string.dart';
@@ -54,7 +55,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    CommonTextField(
+                    commonTextField(
                       hint: AppStrings.userNameHint,
                       textAlign: TextAlign.start,
                       padding: 10,
@@ -62,7 +63,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    CommonTextField(
+                    commonTextField(
                       hint: AppStrings.emailHint,
                       textAlign: TextAlign.start,
                       padding: 10,
@@ -70,7 +71,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    CommonTextField(
+                    commonTextField(
                       hint: AppStrings.phoneHint,
                       textAlign: TextAlign.start,
                       padding: 10,
@@ -139,7 +140,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    CommonTextField(
+                    commonTextField(
                       hint: AppStrings.referralHint,
                       textAlign: TextAlign.start,
                       padding: 10,
@@ -195,7 +196,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     const SizedBox(
                       height: 30,
                     ),
-                    CommonButton(text: AppStrings.letsStart, onPressed: () {}),
+                    CommonButton(
+                        text: AppStrings.letsStart,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const FullSeriesPage(),
+                            ),
+                          );
+                        }),
                   ],
                 ),
               ),
